@@ -10,7 +10,8 @@ int main()
   for (int i = 0; i < ncasos; ++i)
   {
     cin >> programa;
-    cout << programa[0] << "\n";
+    programa.resize(programa.size() - 2);
+    cout << programa << "\n";
   }
 
   return 0;
