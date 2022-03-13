@@ -50,7 +50,7 @@ int main()
 	for (i = 0; i < casos; ++i)
 	{
 		cin >> numero;
-		while (0 < numero < 1000)
+		while (0 < numero and numero < 1000)
 		{
 			numero = numero * 10;
 		}
