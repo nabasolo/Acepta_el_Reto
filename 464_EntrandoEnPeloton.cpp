@@ -1,21 +1,25 @@
 #include <iostream>
+#include <vector>
+#include <tuple>
 using namespace std;
 
 int main()
 {
-    unsigned int corredores;
-    int i;
-    char tiempo[256];
+    unsigned int nCorredores, hh, mm, ss, i, segundos;
+    char dosPuntos;
+    vector<tuple<unsigned int, unsigned int>> corredores;
 
-    cin >> corredores;
-
-    for (i = 0; i < corredores; i++)
+    while (cin >> nCorredores)
     {
-        cin.getline(tiempo, 256);
-        cout << tiempo[0] << tiempo[1] << ", suma: " << tiempo[0] + tiempo[1] << endl;
-    }
+        for (i = 0; i < nCorredores; i++)
+        {
+            cin >> hh >> dosPuntos >> mm >> dosPuntos >> ss;
+            segundos = hh * 3600 + mm * 60 + ss;
+            corredores.push_back(tuple<unsigned int, unsigned int>(i, segundos));
+        }
 
-    cout << "---\n";
+        cout << "---\n";
+    }
 
     return 0;
 }
