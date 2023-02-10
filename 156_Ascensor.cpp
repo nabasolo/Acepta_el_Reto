@@ -3,8 +3,7 @@ using namespace std;
 
 int main()
 {
-  int pisoActual, pisoDestino;
-  unsigned int longitud;
+  int pisoActual, pisoDestino, longitud;
   longitud = 0;
 
   cin >> pisoActual;
@@ -13,10 +12,7 @@ int main()
     cin >> pisoDestino;
     while (pisoDestino != -1)
     {
-
-      // a = (a < 0) ? -a : a;
-
-      longitud = longitud + abs(pisoActual - pisoDestino);
+      longitud += abs(pisoActual - pisoDestino);
       pisoActual = pisoDestino;
       cin >> pisoDestino;
     }
@@ -27,3 +23,5 @@ int main()
 
   return 0;
 }
+
+// #Veredicto Time limit exceeded (TLE)
